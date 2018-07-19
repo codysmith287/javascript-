@@ -284,17 +284,3 @@ nonString += 20;
 //     console.log(me[property]);
 // }
 
-let favMovies = [];
-
-let favorite = ["Star Wars", "Luke"];
-let secondFav =["Batman", "Bruce"];
-let thirdFav = ["Taken", "Liam"];
-let fourthFav = ["Ironman", "Tony"];
-let fifthFav = ["Hulk", "Bruce Banner"]
-
-favMovies.unshift(favorite, secondFav, thirdFav, fourthFav, fifthFav);
-let input = "Taken";
-for (let i = 0; i < favMovies.length; i++) {
-
-  if(favMovies[i][0] === "Taken") alert (`${favMovies[i][0]} ${favMovies[i][1]}`);
-}
