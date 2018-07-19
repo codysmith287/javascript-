@@ -1,3 +1,5 @@
+ /*
+
  var myString = "Hello World!*76 ";
 
  var myNumber = 43; // PRIMITIVE
@@ -13,7 +15,7 @@
   console.log(newVarible, 'INSIDE the scope');
  }
 
- // let newVarible; // DECLARATION
+ let newVarible; // DECLARATION
  newVarible = "My dog is ugly"; // DEFINITION
  console.log(newVarible, 'OUTSIDE the scope');
 
@@ -53,3 +55,361 @@
 
  let userName = prompt("What's your name?", "John");
  console.log(userName);
+
+ */
+
+// let bestNumber = false;
+// let isTrue = false;
+
+// console.log(isTrue || bestNumber);
+
+// console.log(!isTrue);
+
+// let num = 11;
+// let string = '11';
+
+// console.log(num == string); //loose equality checks for value
+
+// console.log(num === string); //strict Equality checks for value AND type
+
+// const prim = "Hello World";
+// const otherString =  new String ("Hello World");
+
+// console.log(prim === otherString); //false
+// console.log(prim == otherString); //TRUE
+
+//MODULUS
+// console.log(5 % 2); // returns
+
+// INC and DEC
+let start = 1;
+
+// ....after some logic
+start--; // start = start - 1;
+//console.log(start); //start++ returns 2
+
+let nonNumber ="cheese";
+
+// console.log(parseInt(nonNumber));
+
+// console.log(isNaN(nonNumber)); // NaN = not a number
+
+let fifty = "50";
+
+// console.log(parseInt(fifty));
+
+let nonString = 50000;
+
+// console.log(nonString.toString()); // NOT A REASSIGNMENT
+nonString += 20;
+
+// console.log(nonString); //nonString = nonString + 20
+
+// let firstNum = parseInt(prompt("Pick a number...", "10"));
+// let secondNum = parseInt(prompt("Pick a second number...", "10"));
+
+// if(!isNaN(firstNum) && !isNaN(secondNum)) {
+//   alert(firstNum + secondNum);
+// } else if (isNaN(secondNum)) {
+//   secondNum = parseInt(prompt('No, I said a number!!!', '10'));
+//   alert(firstNum + secondNum);
+// } else {
+//   alert('No dummie!');
+// };
+
+//SWITCH
+
+// let greeting = prompt ("Tell me how to say hello", "Hola!");
+
+// switch(greeting.toLowerCase()) { //NORMALIZING DATA!
+//   case 'hello':
+//     alert(`I love saying ${greeting}!`);
+//     break;
+//   case 'wassup':
+//     alert(`${greeting} is SO 90s!!!`);
+//     break;
+//   default:
+//     alert(`I've never heard ${greeting} before!`);
+//     break;
+// }
+
+// TERNARY
+
+// let money = 10;
+// let currency = confirm("In dollars or not?");
+//
+// currency ? alert (`$${money}`) : alert(money); //TERNARY - MOST OF THE TIME WHEN YOU SEE A ? IT IS A TERNARY
+
+// ARRAYS
+
+// let myArray = []; // MOST basic form of myArray
+// let myFavoriteFoods = ["pizza", "hamburgers", "french fries"];
+// let allTheThings = ["string", 23, ["stuff"], {}, false];
+
+// console.log(myFavoriteFoods[1]);
+
+// let funFacts = ["Avengers", 30, true, 2005];
+
+// console.log(funFacts, funFacts.length);
+
+// Check if it is an Array
+// console.log(Array.isArray(funFacts), typeof funFacts);
+
+// PUSH - adds elements to the end of an array
+// console.log(funFacts);
+// funFacts.push("Mark Walberg"); //Changes the value of original array.
+// console.log(funFacts);
+
+// UNSHIFT - adds elements to the beginning of an array
+// funFacts.unshift("Denise Lopez");
+// console.log(funFacts);
+
+// POP
+// let lastMember = funFacts.pop();
+// console.log(lastMember, funFacts);
+
+// SHIFT
+// funFacts.shift();
+// console.log(funFacts);
+
+// SPLICE
+// funFacts.splice(2);//1 argument: BEGINNING with that index, removes ALL indices after
+// console.log(funFacts);
+
+// console.log(funFacts, 'BEFORE');
+// funFacts.splice(1, 1); //2 arguements: Starting at the first number (index) and INCLUDING it, remove the second number amount of items(count).
+// console.log(funFacts, 'AFTER');
+
+// console.log(funFacts, 'BEFORE');
+// funFacts.splice(3,1, ["I got added!"]); // 3 arguements: starting at, remove 1 things, and then add my array
+// console.log(funFacts, 'AFTER');
+
+// funFacts.splice(-3, 1); // use negative number if you want the index to start at the end of the array, counting backwards)
+
+// Reminder - Boolean means true or false
+
+// SLICE
+// let copy = funFacts.slice(1, 4);
+// console.log(copy, funFacts);
+
+//IndexOf *will be used in later takehome practice
+// let removeIndex =funFacts.indexOf(42); // returns the index of 42 in our funFacts array
+// console.log(removeIndex);
+// funFacts.splice(removeIndex, 1);
+
+// let myNums = [1, 2, 3, 4, 5];
+// console.log(myNums.reverse()); // modifies the array for this point
+// console.log(myNums);
+
+// SORT
+// console.log(funFacts);
+//funFacts.sort();
+// console.log(funFacts);
+
+//let multiDimemsional =[['hello,', 1], ['goodbye', 0]];
+
+// console.log(multiDimemsional[0][1], multiDimemsional[1][1]);
+
+// Try it Out Day 4
+
+//let favMovies = [];
+
+//let favorite = ["Star Wars", "Luke"];
+//let secondFav =["Batman", "Bruce"];
+//let thirdFav = ["Taken", "Liam"];
+//let fourthFav = ["Ironman", "Tony"];
+//let fifthFav = ["Hulk", "Bruce Banner"]
+
+//favMovies.unshift(favorite, secondFav, thirdFav, fourthFav, fifthFav);
+//console.log(favMovies);
+
+//let titles = [];
+//titles.unshift(favMovies[0][0], favMovies[2][0]);
+//console.log(titles);
+
+//let favAndLeast = [];
+//favAndLeast.push(favMovies[0], favMovies[1]);
+//console.log(favAndLeast);
+
+//alert(favMovies.length);
+
+// for (let i = 0; i < 11; i++) {
+//   console.log(`The number is ${i * 10}`);
+// }
+
+// LOOPS
+
+// FOR LOOPS
+
+// const colors = ['blue', 'purple', 'green', 'red', 'aquamarine', 'chartreuse'];
+//
+// for (let index = 0; index < colors.length; index++) {
+//   console.log(colors[index]);
+//   if (index === 1) break;
+// }
+
+// break ends a loops
+// continue restarts a loop
+
+// WHILE LOOPS
+
+// let counter = 0;
+// while (counter < 5) {
+//   console.log(`before ${counter}`);
+//   counter++;
+//   console.log(`after ${counter}`);
+// }
+
+// FOR EACH
+
+// const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+// captains.forEach( (captain, index) => { // (value, index)
+//   console.log(captain, index);
+// } );
+
+// FOR...OF (is for ARRAYS, returns just the value NOT the index)
+// const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+// for (let captain of captains) { // (let value of varible)
+//   console.log(`Hello Captain ${captain}`);
+// }
+//
+// // FOR..IN (is for OBJECTS)
+// const me = {
+//   firstName: 'Cody',
+//   lastName: 'Smith',
+//   age: 31,
+// };
+//
+// for (let property in me) {
+//     console.log(me[property]);
+// }
+
+// let favMovies = [];
+//
+// let favorite = ["Star Wars", "Luke"];
+// let secondFav =["Batman", "Bruce"];
+// let thirdFav = ["Taken", "Liam"];
+// let fourthFav = ["Ironman", "Tony"];
+// let fifthFav = ["Hulk", "Bruce Banner"]
+//
+// favMovies.unshift(favorite, secondFav, thirdFav, fourthFav, fifthFav);
+// let input = "Taken";
+// for (let i = 0; i < favMovies.length; i++) {
+//
+//   if(favMovies[i][0] === "Taken") alert (`${favMovies[i][0]} ${favMovies[i][1]}`);
+// }
+
+// ANONYMOUS FUNCTION
+
+// FUNCTION DEFINITION
+//  function (string) { //Inside the () is where your ARGUMENTS/PARAMETERS go.
+//  return string.toUpperCase(); //Data transformation and return. As soon as JS sees the return statement it complete that line of code and stop.
+//  console.log(string);
+// }; //End of the function
+
+// NAMED FUNCTIONS
+// FUNCTIONS DEFINITION
+function addTwo(numberIWantToChange) { // arguement
+  return numberIWantToChange + 2; // value
+};
+
+// CALL the FUNCTION
+// console.log(addTwo(1)); //Call Site
+
+let myNewNumber = addTwo(34);
+
+function logMyString(string) {
+  console.log(string);
+};
+
+// logMyString('Playa playa');
+
+
+// FUNCTION DECLARATION (IS HOISTED)
+function alertsAd() {
+  alert('Hey, we have a sale...');
+};
+
+// alertsAd();
+
+// FUNCTION EXPRESSION (NOT HOISTED)
+let confirmStuff = function(someString) {
+  let newVariable = "cheese";
+  confirm(someString);
+};
+
+// confirmStuff("Do you want to watch Frozen?")
+
+// console.log(newVariable); // WOULD THROW ERR
+
+// RECURSION
+let i = 0;
+function iCallMyself() {
+  console.log(i);
+  i++;
+  if(i < 10) iCallMyself();
+};
+
+// iCallMyself();
+
+
+//FAT ARROW FUNCTIONS
+// BASIC IMPLEMENTATION
+(logFunction, alertFunction) => { // No function keyword
+  logFunction('hello world');
+  alertFunction('Goodbye, friends!');
+};
+
+string => { //PARENS ARE OPTIONAL
+    console.log(string);
+};
+
+// FUNCTION EXPRESSION OF FAT ARROW
+let logString = string => {
+  console.log(string);
+};
+
+// logString("Hello cats");
+// IMPLICIT RETURN
+string => (string.toUpperCase()); //ANYTHING IN THE () SHOULD BE IMMEDIATELY RETURNED. ONLY WORK IF HAVING THING TO RETURN.
+string => string.toUpperCase(); //also correct
+
+// Day5 tryItOut
+
+
+
+function dogYears() {
+  let dogAge = (parseInt(prompt("How many years (actual) old is your dog?", "3")) * 7);
+    alert(`That's ${dogAge} in dog years...`);
+};
+
+dogYears();
+
+
+let lifeTimeSupply = (age, ppd) => {
+  age = prompt(parseInt(prompt("How old are you?", "21")) * 365);
+  ppd = prompt(parseInt(prompt("How many cups of coffee do you drink per day?" "2")));
+
+}
+
+function calcLifeTimeSupply(currentAge, dailyUse, maxAge) {
+
+  if(isNaN(currentAge) && isNaN(dailyUse) && isNaN(maxAge)) {
+    alert("Please give me a number!");
+    let currentAgeSecondTry = prompt("What is your age?");
+    let dailyUseSecondTry = prompt("How many per year?");
+    let maxAgeSecondTry = prompt("What do you expect to die?")
+    calcLifeTimeSupply(currentAgeSecondTry, dailyUseSecondTry);
+  } else {
+    if(currentAge < maxAge) {
+    let supply = (maxAge - currentAge) * (dailyUse * 365);
+    alert(`You will need ${supply} to last until you're ${endofLife}`)
+    }
+  }
+}
+
+calcLifeTimeSupply(...,...,...);
+
+// Methods
+console.log(blah); // log was written to consume a parameter;
+string.toUpperCase(); // toUpperCase was written to not consume a parameter;
