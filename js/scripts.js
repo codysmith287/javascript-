@@ -413,3 +413,5 @@ calcLifeTimeSupply(...,...,...);
 // Methods
 console.log(blah); // log was written to consume a parameter;
 string.toUpperCase(); // toUpperCase was written to not consume a parameter;
+
+console.log("This is stupid");
