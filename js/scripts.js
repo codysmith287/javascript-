@@ -1,55 +1,24 @@
- var myString = "Hello World!*76 ";
+ // DAY 6 - Querying the DOM
 
- var myNumber = 43; // PRIMITIVE
- var myOtherNumber = new Number (43); //NUMBER OBJECT
+const body = document.getElementsByTagName("body"); // () must be contain a string, otherwise JS will think it's undefinied variable
+// console.log(body[0]);
+const header = document.getElementsByClassName("heading");
 
- var isLoggedIn = false; //Boolean
+const paragraph = document.getElementById("paragraph1");
+// console.log(paragraph);
 
- let newVarible = "I am the best variable!";
- console.log(newVarible, 'AFTER being declared');
+let div = document.querySelector("#beth_mvp");
 
- {
-  let newVarible = "I am the worst... "; //DELCARATION AND DEFINITION
-  console.log(newVarible, 'INSIDE the scope');
- }
+// let divs = document.querySelectorAll(".jr-mvp");
 
- // let newVarible; // DECLARATION
- newVarible = "My dog is ugly"; // DEFINITION
- console.log(newVarible, 'OUTSIDE the scope');
+  div.addEventListener(
+    "mouseover",
+    ev => {
+      console.log(ev);
+      div.style.backgroundColor = "blue";
+    }
 
-
- isLoggedIn = null;
-
- const age = 32; // Have to declare and define *Most common in module imports.
-
- {
-   const age = 35;
-   console.log(age);
- };
-
- console.log(age);
-
- let today = new Date();
- let myBirthday = new Date('07/01/1987');
- console.log(myBirthday);
-
- let bestNumber = 42.7;
-
- Math.floor(bestNumber);
- let calc = Math.ceil(bestNumber) * Math.PI;
- console.log(Math.ceil(calc));
-
- let classRoom = "Room 1";
- let objectClassRoom = new String("Room 1");
- console.log(typeof classRoom);
- console.log(typeof objectClassRoom);
- console.log(classRoom.length); // Javascript will convert a primitive to an object and back to a primitive.
-
- // alert ("Hey there...") // One directional comm to your user.
-
- // const isReady = confirm("Isu Ready?!");
-
- // alert(isReady);
-
- let userName = prompt("What's your name?", "John");
- console.log(userName);
+    // function(ev) {
+    //   div.style.backgroundColor = "#000";
+    // }
+  );
