@@ -38,3 +38,11 @@ userForm.addEventListener("submit", e => {
   console.log(newUser);
   userForm.reset();
 })
+
+User.prototype.calculateCartTotal = function() {
+  let total = 0;
+  this.cart.forEach(item => {
+    total += items.price;
+  });
+  return total;
+};
