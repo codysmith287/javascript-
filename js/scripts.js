@@ -1,64 +1,40 @@
-let loginForm = document.forms.login;
-let emailInput = loginForm.email;
-let passwordInput = loginForm.password;
+let sentence = new String("Ann went walking one day.");
+let number = new Number(32);
+// console.log(Object.getPrototypeOf(sentence));
 
-//different ways of data submission to a backend server
-  // parameters e.g. file:///Users/cms287/Documents/projects/javascript-/index.html?email=cms287%40gmail.com&password=chuckwow87
-    // ? = afterthis = query parameters; & = separates parameters
-// Other methods are GET and POST
-  // GET - they don't send you any data and you give them information(data) back
-  // POST - you gather information from the user and you them information(data) back
-
-// Take Home - Day 7
-
-emailInput.addEventListener("keydown", e => {
-  console.log(this) // What key did they hit?
-  e.target.value // What is getting typed in
-});
-
-// Read up on RegExp
-
-
-// loginForm.addEventListener("submit", e => {
-//   e.preventDefault(); // stops default action from happening and allows you validate or redirect the data(info)
-//   //... do some checks, submit the form, etc
-//   loginForm.reset(); // Clear inputs on form
-// });
-
-// THIS
-// let favorites = ["pickles"];
-
-
-function listItems(pet) {
-  listItems.call();
-  console.log(this);
-  alert(`${this.name} loves ${this.favorites[0]} and has a ${pet}`);
+let dude = { // Most basic way to create an object
+  catchPhrase: "Where is my car?", // KEY : VALUE pair, which make a PROPERTY
+  firstName: "Big",
+  lastName: "Lebowski",
+  age: Infinity
 };
 
 
-  // THIS will always default to the windoe unless we change it.
-  let user = {
-    name: "Ryeker",
-    cart: [],
-    coupons: [],
-    favorites: ["cheese"],
-    listFavorites: listItems // IMPLICITYLY BINDS "THIS"
-  };
+function User(name, email, password, favorites, cart) {
+  this.name = name;
+  this.email = email;
+  this.password = password;
+  this.favorites = favorites;
+  this.cart = cart;
+}; // 4th was to bind THIS
 
-  // IMPLICIT "THIS" BINDING
-  user.listFavorites(); // call site
-  // log out: Ryeker loves cheese.
+let cody = new User("Cody", "code-man-5000@gmail.com", "123456", [], []);
+// console.log(cody);
+// console.log(Object.getPrototypeOf(cody));
 
-  //  EXPLICITY BINDING
-  let jr = {
-    name: "Junior Royce",
-    cart: ["guns n rose"],
-    coupons: [1.99],
-    favorites: ["Star Wars"]
-  };
+let ryeker = new User("Ryker", "best_teach@truth.com", "11111", [], []);
+ryeker.isAdmin = true; // dot notation
+ryeker["isAdmin"] = false; // bracket notation
+console.log(ryeker, cody);
 
-  listItems.call(jr, "dog"); // Rule 1 about call is it must be called on a FUNCTION
-  // Rule 2 for call is if the function being bound requires Arguements, they being as the SECOND argument of call()
+// TRY IT OUT: build a new user with a form in HTML and your user getPrototypeOf
 
-  // APPLY
-  listItems.apply(jr, ["cat"]);
+
+const userForm = document.forms.userForm;
+
+userForm.addEventListener("submit", e => {
+  e.preventDefault();
+  let newUser = new User(userForm.name.value, userForm.email.value, userForm.password.value, [], []);
+  console.log(newUser);
+  userForm.reset();
+})
