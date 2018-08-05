@@ -37,7 +37,7 @@ userForm.addEventListener("submit", e => {
   let newUser = new User(userForm.name.value, userForm.email.value, userForm.password.value, [], []);
   console.log(newUser);
   userForm.reset();
-})
+});
 
 User.prototype.calculateCartTotal = function() {
   let total = 0;
